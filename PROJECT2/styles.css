@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d2b66, #4e085f, #3e0327);
+    padding: 10px;
+}
+
+.todo-app {
+    width:80% ;
+    /* max-width: 770px; */
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    font-size:40px;
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.todo-app h2 img{
+    width: 60px;
+    margin-left: 30px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    /* padding:60px ; */
+    padding-left: 20px;
+    margin-bottom: 25px;
+    margin: auto;
+}
+input{
+    /* width: 70%; */
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 200;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    /* border: 2px solid #ff5945; */
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 17px;
+    padding: 28px 78px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    /* width: 90%; */
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50;
+    background-image:url(Exclamation_mark_red.png) ;
+    background-size: cover;
+    background-position: center;
+    top:25px ;
+    left: 9px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image:url(check.png) ;
+    top: 20px;
+}
+ul li span{
+    position: absolute;
+    right: 42px;
+    top: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: #ff5945 ;
+}
